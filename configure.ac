@@ -22,10 +22,10 @@
 
 # Initialize Autoconf
 AC_PREREQ([2.60])
-AC_INIT([xf86-input-elographics],
-        [1.4.4],
-        [https://gitlab.freedesktop.org/xorg/driver/xf86-input-elographics/-/issues],
-        [xf86-input-elographics])
+AC_INIT([xlibre-xf86-input-elographics],
+        [25.0.1],
+        [https://github.com/X11Libre/xf86-input-elographics/issues],
+        [xlibre-xf86-input-elographics])
 AC_CONFIG_SRCDIR([Makefile.am])
 AC_CONFIG_AUX_DIR(.)
 AC_CONFIG_HEADERS([config.h])
@@ -59,20 +59,6 @@ XORG_DRIVER_CHECK_EXT(XINPUT, inputproto)
 
 # Checks for pkg-config packages
 PKG_CHECK_MODULES(XORG, [xorg-server >= 1.18.0] xproto $REQUIRED_MODULES)
-sdkdir=$(pkg-config --variable=sdkdir xorg-server)
-
-# Checks for libraries.
-
-# Checks for header files.
-
-# Checks for library functions
-# We don't use strlcat, strlcpy, or timingsafe_memcmp, but check to quiet
-# -Wredundant-decls warning from xorg/os.h which will otherwise redefine them.
-AC_CHECK_FUNCS([strlcat strlcpy timingsafe_memcmp])
-
-DRIVER_NAME=elographics
-AC_SUBST([DRIVER_NAME])
-
 
 AC_CONFIG_FILES([Makefile src/Makefile man/Makefile])
 AC_OUTPUT
