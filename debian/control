@@ -13,8 +13,8 @@ Build-Depends:
  x11proto-randr-dev,
  xutils-dev
 Standards-Version: 3.9.2
-Vcs-Git: https://github.com/xlibre-deb/xserver-xlibre-input-elographics.git
-Vcs-Browser: https://github.com/xlibre-deb/xserver-xlibre-input-elographics
+Vcs-Git: https://github.com/xlibre-debian/xserver-xlibre-input-elographics.git
+Vcs-Browser: https://github.com/xlibre-debian/xserver-xlibre-input-elographics
 Homepage: https://github.com/X11Libre
 
 Package: xserver-xlibre-input-elographics
